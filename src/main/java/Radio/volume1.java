@@ -9,11 +9,11 @@ public class volume1 {
         }
         currentVolume  = newVolume;
     }
-    public void safeVolume(int newVolume){
-        if (newVolume == 1) {
-            newVolume = 1;
+    public void safeVolume(int safevolume){
+        if (safevolume == 1) {
+            safevolume = 1;
         }
-        currentVolume = newVolume;
+        currentVolume = safevolume;
     }
 
 

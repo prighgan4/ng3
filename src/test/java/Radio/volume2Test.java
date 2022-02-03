@@ -11,7 +11,7 @@ class volume2Test {
         volume2 vol = new volume2();
         vol.increaseVolume(10);
 
-        int expected = 5;
+        int expected = 10;
         int actual = vol.getCurrentVolume();
         assertEquals(expected,actual);
     }

@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class volumeTest {
+class volume2Test {
 
     @Test
-    void shouldCalculateCurrentVolume() {
-        volume vol = new volume();
-        vol.increaseVolume(6);
+    void shouldCalculateCurrentVolume10() {
+        volume2 vol = new volume2();
+        vol.increaseVolume(10);
 
-        int expected = 6;
+        int expected = 5;
         int actual = vol.getCurrentVolume();
         assertEquals(expected,actual);
     }

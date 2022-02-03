@@ -11,7 +11,7 @@ class channelTest {
         channel chan = new channel();
         chan.setCurrentChannel(9);
 
-        int expected = 0;
+        int expected = 9;
         int actual = chan.getCurrentChannel();
 
         assertEquals(expected,actual);

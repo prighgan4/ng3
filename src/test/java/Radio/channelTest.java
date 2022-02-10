@@ -9,9 +9,9 @@ class channelTest {
     @Test
     void shouldCalculateCurrentChannel() {
         channel chan = new channel();
-        chan.setCurrentChannel(9);
+        chan.setCurrentChannel(6);
 
-        int expected = 9;
+        int expected = 7;
         int actual = chan.getCurrentChannel();
 
         assertEquals(expected,actual);

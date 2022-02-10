@@ -7,11 +7,14 @@ public class channel {
       int next = 9;
       int prev = 0;
       if (newChannel > next) {
-          newChannel = 0;
+          newChannel = prev;
       }
-      if (newChannel < prev) {
-          newChannel = 9;
+      if (newChannel > prev) {
+          newChannel = newChannel + 1;
       }
+        if (newChannel == prev) {
+            newChannel = newChannel + 1;
+        }
       currentChannel = newChannel;
     }
 

@@ -3,20 +3,16 @@ package Radio;
 public class volume1 {
     public int currentVolume;
 
-    public void increaseVolume(int newVolume) {
-        if (newVolume > 1) {
-            newVolume = newVolume + 1;
+    public void increaseVolume(int volume) {
+        if (volume < 10) {
+            volume = volume + 1;
         }
-        currentVolume  = newVolume;
-    }
-    public void safeVolume(int safevolume){
-        if (safevolume == 1) {
-            safevolume = 1;
+        if (volume == 10) {
+            volume = 10;
         }
-        currentVolume = safevolume;
+        currentVolume = volume;
+
     }
-
-
 
     public int getCurrentVolume() {
         return currentVolume;

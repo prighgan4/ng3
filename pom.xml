@@ -30,7 +30,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <version>2.22.2</version>
                 <configuration>
-                    <failIfNoTests>true</failIfNoTests>
+                    <failIfNoTests>false</failIfNoTests>
                 </configuration>
             </plugin>
             <plugin>
@@ -62,8 +62,9 @@
                                     <limits>
                                         <limit>
                                             <counter>INSTRUCTION</counter>
-                                            <value>BRANCH</value>
-                                            <minimum>100%</minimum>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>85%</minimum>
+                                            <maximum>100%</maximum>
                                         </limit>
                                     </limits>
                                 </rule>

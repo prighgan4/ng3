@@ -1,6 +1,6 @@
 package Radio;
 
-public class channel {
+public class radio {
     public int currentChannel;
 
     public void setCurrentChannel(int newChannel){
@@ -21,7 +21,25 @@ public class channel {
     public int getCurrentChannel() {
         return currentChannel;
     }
+
+    public int currentVolume;
+
+    public void increaseVolume(int volume){
+        if (volume < 10) {
+            volume = volume + 1;
+        }
+        if (volume == 10) {
+            volume = 10;
+        }
+        currentVolume = volume;
+
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
 }
+
 
 
 

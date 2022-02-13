@@ -8,12 +8,13 @@ class channelTest {
 
     @Test
     void shouldCalculateCurrentChannel() {
-        channel chan = new channel();
-        chan.setCurrentChannel(6);
+        radio rad = new radio();
+        rad.setCurrentChannel(6);
 
         int expected = 7;
-        int actual = chan.getCurrentChannel();
+        int actual = rad.getCurrentChannel();
 
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 }
+

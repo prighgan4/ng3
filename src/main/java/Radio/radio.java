@@ -2,20 +2,28 @@ package Radio;
 
 public class radio {
     public int currentChannel;
+    int firstChannel = 0;
+    int lastChannel = 9;
 
-    public void setCurrentChannel(int newChannel){
-      int next = 9;
-      int prev = 0;
-      if (newChannel > next) {
-          newChannel = prev;
-      }
-      if (newChannel > prev) {
-          newChannel = newChannel + 1;
-      }
-        if (newChannel == prev) {
-            newChannel = newChannel + 1;
+
+    public void setCurrentChannel1(int next) {
+        if (next == firstChannel) {
+            next = next + 1;
         }
-      currentChannel = newChannel;
+        if (next == lastChannel) {
+            next = firstChannel;
+        }
+        currentChannel = next;
+    }
+
+    public void setCurrentChannel2(int prev) {
+        if (prev == lastChannel) {
+            prev = prev - 1;
+        }
+        if (prev == firstChannel) {
+            prev = lastChannel;
+        }
+        currentChannel = prev;
     }
 
     public int getCurrentChannel() {
@@ -23,25 +31,28 @@ public class radio {
     }
 
     public int currentVolume;
+    int firstVolume = 1;
+    int lastVolume = 10;
 
-    public void increaseVolume(int volume){
-        if (volume < 10) {
-            volume = volume + 1;
+    public void setCurrentVolume1(int currentVolume1) {
+        if (currentVolume1 < 10) {
+            currentVolume1 = currentVolume1 + 1;
         }
-        if (volume == 10) {
-            volume = 10;
-        }
-        currentVolume = volume;
+        currentVolume = currentVolume1;
+    }
 
+    public void setCurrentVolume2(int currentVolume2) {
+        if (currentVolume2 == 10) {
+            currentVolume2 = currentVolume2 - 1;
+        }
+        currentVolume = currentVolume2;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
+
 }
-
-
-
 
 
 

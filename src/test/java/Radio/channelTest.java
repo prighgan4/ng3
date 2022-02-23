@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class channelTest {
 
     @Test
-    void shouldCalculateCurrentChannel() {
+    void shouldCalculateCurrentChannel86() {
         radio rad = new radio();
-        rad.setCurrentChannel(6);
+        rad.setCurrentChannel2(6);
 
         int expected = 7;
         int actual = rad.getCurrentChannel();

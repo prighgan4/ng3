@@ -1,6 +1,6 @@
 package Radio;
 
-public class radio {
+public class Radio {
     public int currentChannel;
     int firstChannel = 0;
     int lastChannel = 9;
@@ -35,14 +35,14 @@ public class radio {
     int lastVolume = 10;
 
     public void setCurrentVolume1(int currentVolume1) {
-        if (currentVolume1 < 10) {
+        if (currentVolume1 < lastVolume) {
             currentVolume1 = currentVolume1 + 1;
         }
         currentVolume = currentVolume1;
     }
 
     public void setCurrentVolume2(int currentVolume2) {
-        if (currentVolume2 == 10) {
+        if (currentVolume2 == lastVolume) {
             currentVolume2 = currentVolume2 - 1;
         }
         currentVolume = currentVolume2;
